@@ -67,12 +67,12 @@ const Feedback = () => {
         :
         
     <div>
-            <h1>Give Feedback</h1>
-            <FeedbackButton text={"good"} clickCounter={setGood} count={good} averageCalc={setAverage} average={average}/>
-            <FeedbackButton text={"neutral"} clickCounter ={setNeutral} count={neutral} averageCalc={setAverage} average={average}/>
-            <FeedbackButton text={"bad"} clickCounter = {setBad} count={bad} averageCalc={setAverage} average={average}/>
-            <Statistics good={good} bad = {bad} neutral={neutral} average={average}/>
-        </div>
+        <h1>Give Feedback</h1>
+        <FeedbackButton text={"good"} clickCounter={setGood} count={good} averageCalc={setAverage} average={average}/>
+        <FeedbackButton text={"neutral"} clickCounter ={setNeutral} count={neutral} averageCalc={setAverage} average={average}/>
+        <FeedbackButton text={"bad"} clickCounter = {setBad} count={bad} averageCalc={setAverage} average={average}/>
+        <Statistics good={good} bad = {bad} neutral={neutral} average={average}/>
+    </div>
     )
         
     
