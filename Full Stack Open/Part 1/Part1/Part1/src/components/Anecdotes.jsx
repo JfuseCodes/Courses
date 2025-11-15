@@ -67,19 +67,33 @@ const Anecdotes = () => {
     */}
 
 
-    const checkHighNumbers = () => {
-        if(maxNumber > 0){
-            for(let i =0;i <= anecdotes.length - 1;i++) {
-            // console.log(Object.keys(votes))
-            // console.log(Object.values(votes))
-            console.log(votes[i])
-            votes[i] == maxNumber ? console.log(`highest vote is: ${votes[i].key}`) : console.log('not found')
-            // Object.values(votes) == maxNumber ? console.log('max number found!') : console.log('not quite')
-            // if(maxNumber && Object.keys(votes).values == maxNumber) console.log('max number found')
-        }
-    }}
+    // const checkHighNumbers = () => {
+    //     if(maxNumber > 0){
+    //         for(let i =0;i <= anecdotes.length - 1;i++) {
+    //         // console.log(Object.keys(votes))
+    //         // console.log(Object.values(votes))
+    //         console.log(votes[i])
+    //         votes[i] == maxNumber ? console.log(`highest vote is: ${votes[i].key}`) : console.log('not found')
+    //         // Object.values(votes) == maxNumber ? console.log('max number found!') : console.log('not quite')
+    //         // if(maxNumber && Object.keys(votes).values == maxNumber) console.log('max number found')
+    //     }
+    // }}
+
     
-    checkHighNumbers()
+    // checkHighNumbers()
+
+    const checkHighNumbers = () => {
+        // convert {} to an array 
+        const voteValues = Object.values(votes);
+
+        // find the highest vote count
+        const _maxNUmber = Math.max(...voteValues);
+
+        // find the index (anecdote) that has the highest vote count
+        const highestIndex = Object.keys(votes).find(key => votes[key] === _maxNUmber);
+
+        console.log(`Anecdote with the highest votes is at index: ${highestIndex} with ${_maxNUmber} votes.`);
+    }
 
   const [ selected, setSelected ] = useState(getRandomIntInclusive(0, anecdotes.length - 1));
   const handleVote = () => {
