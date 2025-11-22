@@ -1,6 +1,8 @@
 import { useState } from "react"
 
-const AnecdotesOfTheDay = ({anecdotes, selected, votes, handleVote, handleNextAnecdote,}) => {
+const AnecdotesOfTheDay = ({anecdotes, selected, votes, handleVote, handleNextAnecdote}) => {
+
+   
 
     return (
     <div>
@@ -14,7 +16,7 @@ const AnecdotesOfTheDay = ({anecdotes, selected, votes, handleVote, handleNextAn
     )
 }
 
-const MostVotes = ({maxNumber}) => {
+const MostVotes = ({maxNumber, anecdoteWithMostVote, anecdotes}) => {
 
     return (
     <div>
@@ -22,7 +24,7 @@ const MostVotes = ({maxNumber}) => {
             <h3>Anecdote with most votes</h3>
         </header>
         <section>
-            <p></p>
+            <p>{anecdotes[anecdoteWithMostVote]}</p>
             <p>has {maxNumber} votes</p>
         </section>
     </div>)
@@ -57,7 +59,8 @@ const Anecdotes = () => {
     6: 0,
     7: 0
   });
-  const [maxNumber, setMaxNumber] = useState(0);
+  const [maxNumber, setMaxNumber] = useState(null);
+  const [displayMostVote, setDisplayMostVote] = useState(null);
 
  {/*
     PSUEDOCODE:
@@ -67,23 +70,8 @@ const Anecdotes = () => {
     */}
 
 
-    // const checkHighNumbers = () => {
-    //     if(maxNumber > 0){
-    //         for(let i =0;i <= anecdotes.length - 1;i++) {
-    //         // console.log(Object.keys(votes))
-    //         // console.log(Object.values(votes))
-    //         console.log(votes[i])
-    //         votes[i] == maxNumber ? console.log(`highest vote is: ${votes[i].key}`) : console.log('not found')
-    //         // Object.values(votes) == maxNumber ? console.log('max number found!') : console.log('not quite')
-    //         // if(maxNumber && Object.keys(votes).values == maxNumber) console.log('max number found')
-    //     }
-    // }}
-
-    
-    // checkHighNumbers()
-
     const checkHighNumbers = () => {
-        // convert {} to an array 
+        // convert {} to an array
         const voteValues = Object.values(votes);
 
         // find the highest vote count
@@ -91,16 +79,18 @@ const Anecdotes = () => {
 
         // find the index (anecdote) that has the highest vote count
         const highestIndex = Object.keys(votes).find(key => votes[key] === _maxNUmber);
-
-        console.log(`Anecdote with the highest votes is at index: ${highestIndex} with ${_maxNUmber} votes.`);
+        setDisplayMostVote(highestIndex);
+        
+        console.log(`Anecdote with the highest votes is at index ${highestIndex} with ${_maxNUmber} votes.`)
     }
 
   const [ selected, setSelected ] = useState(getRandomIntInclusive(0, anecdotes.length - 1));
   const handleVote = () => {
     setVote({...votes, [selected]: votes[selected] + 1 })
-    const updatedVote = maxNumber + 1
-    setMaxNumber(Math.max(...Object.values(votes)))
+    const updatedVote = Math.max(...Object.values(votes) ) + 1
+    setMaxNumber(updatedVote);
     console.log(`maxVote: ${maxNumber}`)
+    checkHighNumbers()
   }
   const handleNextAnecdote = () => selected == anecdotes.length - 1 ? setSelected(0) : setSelected(selected + 1)
 
@@ -108,7 +98,7 @@ const Anecdotes = () => {
     return (
         <div>
             <AnecdotesOfTheDay anecdotes={anecdotes} selected={selected} votes={votes} handleVote={handleVote} handleNextAnecdote={handleNextAnecdote}/>
-            {maxNumber > 0 ? <MostVotes maxNumber={maxNumber}/> : ''}
+            {maxNumber > 0 ? <MostVotes maxNumber={maxNumber} anecdoteWithMostVote={displayMostVote} anecdotes={anecdotes}/> : ''}
         </div>
     )
 }
