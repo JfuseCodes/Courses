@@ -62,35 +62,57 @@ const Anecdotes = () => {
   const [maxNumber, setMaxNumber] = useState(null);
   const [displayMostVote, setDisplayMostVote] = useState(null);
 
- {/*
-    PSUEDOCODE:
-    
-    WHen i click vote for the current quote, the current quotes vote increase
-    automatically the checker checks each anecdote and its votes, the one with the most gets displayed
-    */}
 
 
-    const checkHighNumbers = () => {
-        // convert {} to an array
-        const voteValues = Object.values(votes);
+    const checkHighNumbers = (updatedVotes) => {
+        // // convert {} to an array
+        // const voteValues = Object.values(votes);
 
-        // find the highest vote count
-        const _maxNUmber = Math.max(...voteValues);
+        // // find the highest vote count
+        // const _maxNUmber = Math.max(...voteValues);
 
-        // find the index (anecdote) that has the highest vote count
-        const highestIndex = Object.keys(votes).find(key => votes[key] === _maxNUmber);
-        setDisplayMostVote(highestIndex);
+        // // find the index (anecdote) that has the highest vote count
+        // const highestIndex = Object.keys(votes).find(key => votes[key] === _maxNUmber);
+        // setDisplayMostVote(highestIndex);
         
-        console.log(`Anecdote with the highest votes is at index ${highestIndex} with ${_maxNUmber} votes.`)
+        // console.log(`Anecdote with the highest votes is at index ${highestIndex} with ${_maxNUmber} votes.`)
+
+        // use passed argument
+        const voteValues = Object.values(updatedVotes)
+
+        //find the highest vote count
+        const _maxNumber = Math.max(...voteValues)
+
+        // find index (anecdote) that has the highest vote count
+        const highestIndex = Object.keys(updatedVotes).find(key => updatedVotes[key] === _maxNumber)
+
+        // Set both display states based on the fresh data
+        setDisplayMostVote(highestIndex)
+        setMaxNumber(_maxNumber) // set this here with correct number
     }
 
   const [ selected, setSelected ] = useState(getRandomIntInclusive(0, anecdotes.length - 1));
   const handleVote = () => {
-    setVote({...votes, [selected]: votes[selected] + 1 })
-    const updatedVote = Math.max(...Object.values(votes) ) + 1
-    setMaxNumber(updatedVote);
-    console.log(`maxVote: ${maxNumber}`)
-    checkHighNumbers()
+    // setVote({...votes, 
+    //     [selected]: votes[selected] + 1 })
+    // const updatedVote = Math.max(...Object.values(votes) ) + 1
+    // setMaxNumber(updatedVote);
+    // console.log(`maxVote: ${maxNumber}`)
+    // checkHighNumbers()
+
+    // 1. Calculate next state object
+    const newVotes ={
+        ...votes,
+        [selected]: votes[selected] + 1
+    }
+
+    // 2. Schedule the state update (asynchronous)
+    setVote(newVotes)
+    
+    // 3. Immediately call the check function, using the newVotes object (synchronous)
+    checkHighNumbers(newVotes)
+
+
   }
   const handleNextAnecdote = () => selected == anecdotes.length - 1 ? setSelected(0) : setSelected(selected + 1)
 
