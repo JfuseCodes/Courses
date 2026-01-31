@@ -2,14 +2,21 @@
 reset browser default styles
 
 */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+:root{
+    --react-logo: #48d4f7;
+    --react-facts--header: #1e1f25;
+    --react-facts--bg: #23282e;
+    --react-facts--white: #f8f8ff;
+    --react-facts--list: #d1d2d4;
+}
+
+/* body {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -17,41 +24,190 @@ body {
     background: #27292c;
     color: #f8f8ff;
     height: 100vh;
-}
+    --react-logo: #48d4f7;
+    --react-facts--header: #1e1f25;
+    border:2px solid pink;
+} */
 
-section{
+/* section{
     display: flex;
     flex-direction: column;
     border:2px solid #f8f8ff;
     border-radius: 20px;
     border-width: 2.5px;
     text-align: left;
-    padding: 40px;
-        box-shadow: 10px 20px 2px -4px #f8f8ff;
+    /* width:50vw; */
+    /* padding: 100px; */
+    /* box-shadow: 10px 20px 2px -4px #f8f8ff; */
+/* } */ 
+
+/* Section styling */
+
+.section--parent-container{
+    min-height:90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    
 }
 
+.section--child-container {
+    /* border:2px solid #f8f8ff; */
+    border:2px solid var(--react-facts--bg);
+    border-radius: 8px;
+    width:60%;
+    height:600px;
+    min-width:400px;
+    background-color: var(--react-facts--bg);
+    color: var(--react-facts--white);
+    /* box-shadow: 20px 20px 8px 0 var(--react-facts--bg); */
+}
 
-main{
+/* 
+    Header Styling
+*/
+
+.header {
+    width:auto;
+    height: 85px;
+    display:flex;
+    background-color: var(--react-facts--header);
+}   
+
+/* 
+    Navbar Styling
+*/
+
+.navbar{
+    padding-left: 20px;
+}
+
+.navbar--react-logo {
+    width: 30px;
+}
+
+.inter-navbar--text{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style:normal;
+  color: var(--react-logo);
+  padding-left:5px;
+  font-size: 20px;
+}
+
+/*  Main styling */
+
+.main{
+    border:2px solid red;
+    display:flex;
     text-align: left;
+    overflow: hidden;
 }
 
-
-h1 {
-    margin-top: 50px;
-    font-size: 40px;
-    padding-bottom: 10px;
+.main--header-parent {
+    /* border:2px solid white; */
 }
 
-img{
-    text-align: left;
+.main--header-heading{
+    padding: 50px 0 15px 25px;
 }
 
+.inter-main--heading{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-style: normal;
+}
 
+/* List Styling */
+
+.main--list-parent {
+    /* border: 2px solid red; */
+}
+
+.inter-main--list {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: var(--react-facts--list);
+}
+
+.main--list {
+    padding-left: 70px;
+}
 
 ul{
-    list-style-position: inside;
+    border:2px solid red;
+    width: 85%;
+    /* list-style-position: inside; */
+    list-style-type: disc;
+
+}
+
+
+li{
+    list-style-type: none;
+    position:relative;
+    padding-left: 1.2em;
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: -22px;
+    font-size: 2em;
+    top: 15px;
+    transform: translateY(-50%);
+    color: var(--react-logo);
 }
 
 ul li{
-    font-size: 20px;
+    /* font-size: 16px; */
+    padding: 8px 0 8px 0;
+    /* margin-bottom: .0em; */
+    line-height: 18px;
+}
+
+/* Main react logo */
+
+.main--react-logo-parent {
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    /* position:absolute; */
+    /* overflow: hidden; */
+    /* height:100%; */
+    /* width:100%; */
+
+    position:absolute;
+}
+
+.main--react-logo-child{
+    position:relative;
+    left:25em;
+    top: 80px;
+    border:2px solid blue;
+    /* position: absolute; */
+    /* overflow: hidden; */
+    /* position:relative; */
+    /* left:490px; */
+    /* min-height:99vh; */
+    /* bottom:20px; */
+    /* width: inherit; */
+
+
+
+}
+.main--react-logo {
+    position:  ;
+    /* left:490px; */
+    /* position:relative; */
+    /* left:50px;
+    width:200px;
+    height:200px; */
+    left: 4em;
+    width:200px;
+    /* position:relative; */
+    /* left:500px;
+    bottom: 20px; */
+
 }
