@@ -68,6 +68,7 @@ reset browser default styles
 */
 
 .header {
+    border:2px solid blue;
     width:auto;
     height: 85px;
     display:flex;
@@ -99,14 +100,15 @@ reset browser default styles
 /*  Main styling */
 
 .main{
-    border:2px solid red;
-    display:flex;
+    border:2px solid blue;
+    /* display:flex; */
     text-align: left;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main--header-parent {
-    /* border:2px solid white; */
+    border:2px solid white;
+    /* width: 40vw; */
 }
 
 .main--header-heading{
@@ -124,6 +126,8 @@ reset browser default styles
 
 .main--list-parent {
     /* border: 2px solid red; */
+    min-width: 100px;
+    /* width: 500px; */
 }
 
 .inter-main--list {
@@ -137,8 +141,8 @@ reset browser default styles
 }
 
 ul{
-    border:2px solid red;
-    width: 85%;
+    /* border:2px solid red; */
+    /* width: 100%; */
     /* list-style-position: inside; */
     list-style-type: disc;
 
@@ -171,43 +175,23 @@ ul li{
 /* Main react logo */
 
 .main--react-logo-parent {
-    /* border: 2px solid red; */
-    /* position: absolute; */
-    /* position:absolute; */
-    /* overflow: hidden; */
-    /* height:100%; */
-    /* width:100%; */
-
-    position:absolute;
+    border: 2px solid green;
+    display:flex;
 }
 
 .main--react-logo-child{
-    position:relative;
-    left:25em;
-    top: 80px;
-    border:2px solid blue;
-    /* position: absolute; */
-    /* overflow: hidden; */
-    /* position:relative; */
-    /* left:490px; */
-    /* min-height:99vh; */
-    /* bottom:20px; */
-    /* width: inherit; */
-
-
+    border:2px solid pink;
+    position: relative;
+    width:8em;
+    right:36em;
+    /* left:130px; */
+    /* overflow:hidden; */
 
 }
 .main--react-logo {
-    position:  ;
-    /* left:490px; */
-    /* position:relative; */
-    /* left:50px;
-    width:200px;
-    height:200px; */
-    left: 4em;
-    width:200px;
-    /* position:relative; */
-    /* left:500px;
-    bottom: 20px; */
-
+    /* position:relative;
+    top:20px;
+    height:200px;
+    width:160px;
+    left:15px; */
 }
