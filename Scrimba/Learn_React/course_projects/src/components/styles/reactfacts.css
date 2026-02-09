@@ -11,7 +11,9 @@ reset browser default styles
 :root{
     --react-logo: #48d4f7;
     --react-facts--header: #1e1f25;
-    --react-facts--bg: #23282e;
+    /* --react-facts--bg: #23282e; */
+    /* --react-facts--main-bg: rgb(38,40,35); */
+    --react-facts--main-bg: #282D35;
     --react-facts--white: #f8f8ff;
     --react-facts--list: #d1d2d4;
 }
@@ -54,13 +56,19 @@ reset browser default styles
 .section--child-container {
     /* border:2px solid #f8f8ff; */
     border:2px solid var(--react-facts--bg);
+    
     border-radius: 8px;
     width:60%;
-    height:600px;
+    height:550px;
     min-width:400px;
-    background-color: var(--react-facts--bg);
+    background-color: var(--react-facts--main-bg);
     color: var(--react-facts--white);
     /* box-shadow: 20px 20px 8px 0 var(--react-facts--bg); */
+
+    background-image: url('../src/assets/react-facts/main--reactjs-icon.png');
+    background-repeat: no-repeat;
+    /* background-position: 473px 50px; */
+    background-position: 100% 170px;
 }
 
 /* 
@@ -68,7 +76,6 @@ reset browser default styles
 */
 
 .header {
-    border:2px solid blue;
     width:auto;
     height: 85px;
     display:flex;
@@ -100,15 +107,11 @@ reset browser default styles
 /*  Main styling */
 
 .main{
-    border:2px solid blue;
-    /* display:flex; */
     text-align: left;
-    /* overflow: hidden; */
 }
 
 .main--header-parent {
-    border:2px solid white;
-    /* width: 40vw; */
+    
 }
 
 .main--header-heading{
@@ -118,16 +121,15 @@ reset browser default styles
 .inter-main--heading{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight:600;
+    font-weight:700;
+    font-size: 39.09px;
     font-style: normal;
 }
 
 /* List Styling */
 
 .main--list-parent {
-    /* border: 2px solid red; */
     min-width: 100px;
-    /* width: 500px; */
 }
 
 .inter-main--list {
@@ -137,19 +139,19 @@ reset browser default styles
 }
 
 .main--list {
-    padding-left: 70px;
+    padding-left: 74px;
+    /* border:2px solid blue; */
+    /* width: 390px; */
 }
 
 ul{
-    /* border:2px solid red; */
-    /* width: 100%; */
-    /* list-style-position: inside; */
-    list-style-type: disc;
-
-}
-
+    /* border:2px solid pink; */
+    width:450px;
+    list-style-type: disc; }
 
 li{
+    font-size:16px;
+    font-weight:400;
     list-style-type: none;
     position:relative;
     padding-left: 1.2em;
@@ -172,26 +174,3 @@ ul li{
     line-height: 18px;
 }
 
-/* Main react logo */
-
-.main--react-logo-parent {
-    border: 2px solid green;
-    display:flex;
-}
-
-.main--react-logo-child{
-    border:2px solid pink;
-    position: relative;
-    width:8em;
-    right:36em;
-    /* left:130px; */
-    /* overflow:hidden; */
-
-}
-.main--react-logo {
-    /* position:relative;
-    top:20px;
-    height:200px;
-    width:160px;
-    left:15px; */
-}
