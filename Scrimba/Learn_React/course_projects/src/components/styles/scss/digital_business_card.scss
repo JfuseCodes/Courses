@@ -1,0 +1,154 @@
+$dbc--container-bg: #23252C;
+$dbc--section-bg: #1A1B21;
+$dbc--profilephoto-bg: #f47621;
+$dbc--primary-white: #FFFFFF;
+$dbc--secondary-white: #F5F5F5;
+$dbc--tertiary-white: #DCDCDC;
+$dbc--font-color--job-title: #F3BF99;
+$dbc--button-email: $dbc--primary-white ;
+$dbc--button-linkedin: #5093E2;
+$dbc--button-text-email: #374151;
+$dbc--footer-bg: #161619;
+
+body {
+    display:flex;
+}
+
+.dbc--section-container {
+    align-items: center;
+    background-color: $dbc--container-bg;
+    display:flex;
+    height: 868px;
+    justify-content: center;
+    min-height:90vh;
+    width: 550px;
+    font-family: Inter, sans-serif;
+
+    .dbc--section-child{
+        
+        background-color: $dbc--section-bg;
+        height:780px;
+        width: 317px;
+    }
+}
+
+.dbc--header {
+    
+    .profile-photo {
+        width: 100%;
+        border-radius: 8px 8px 0 0 ;
+        background-color:orange;
+    }
+}
+
+.dbc--main {
+    
+    height:399px;
+    
+
+    header {
+        .dbc--card-name {
+            color: $dbc--primary-white;
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 21px;
+        }
+
+        .dbc--card-title{
+            color: $dbc--font-color--job-title;
+            font-size: 12.8px;
+            font-weight: 400;
+            margin-top: -6px;
+        }
+
+        .link {
+          
+            a {
+                font-weight: 400;
+                font-size: 10.24px;
+                color: $dbc--secondary-white;
+                text-decoration: none;
+            }
+        }
+        
+
+        .button-containers {
+            width:247px;
+            display:flex;
+            justify-content: space-between;
+            margin: 15px auto;
+            
+
+            .dbc--card-email {
+                background-color: $dbc--button-email;
+                border: 1px solid $dbc--button-email;
+                color: $dbc--button-text-email;
+            }
+
+            .dbc--card-linkedin {
+                background-color: $dbc--button-linkedin;
+                border: 1px solid $dbc--button-linkedin;
+                color: $dbc--primary-white;
+                font-weight: 300;
+            }
+
+
+
+        }
+
+        
+        
+    }
+
+    .dbc--bio {
+        width:247px;
+        margin: 33px auto;
+
+    }
+
+}
+
+.dbc--footer {
+    
+    background-color: $dbc--footer-bg;
+    height:64px;
+    display:flex;
+    justify-content: center;
+    
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    .dbc--footer-container {
+        width: 178px;
+        display:flex;
+        justify-content: space-between;
+    }
+    
+}
+
+// Utility Classes
+.dbc--primary-white {color: $dbc--primary-white;}
+.dbc--secondary-white {color: $dbc--secondary-white;}
+.dbc--tertiary-white {color: $dbc--tertiary-white;}
+.dbc--card-button {
+    width: 115px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 6px;
+    gap: 8px;
+}
+.dbc--fs-16 { font-size: 16px;}
+.dbc--fs-10 { font-size: 10px;}
+.dbc--fw-700 {font-weight: 700;}
+.dbc--fw-400 {font-weight: 400;}
+.dbc--lh-150 {line-height: 150%;}
+.dbc--ta-l {text-align: left;}
+.dbc--bio-p {
+    margin-top: -5px;
+    display:inline-block;
+}
+

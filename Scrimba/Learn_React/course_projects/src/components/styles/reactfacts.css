@@ -63,7 +63,7 @@ reset browser default styles
     min-width:400px;
     background-color: var(--react-facts--main-bg);
     color: var(--react-facts--white);
-    /* box-shadow: 20px 20px 8px 0 var(--react-facts--bg); */
+    /* box-shadow: 2px 2px 4px  var(--react-facts--header); */
 
     background-image: url('../src/assets/react-facts/main--reactjs-icon.png');
     background-repeat: no-repeat;
@@ -80,6 +80,7 @@ reset browser default styles
     height: 85px;
     display:flex;
     background-color: var(--react-facts--header);
+    border-radius: 8px 8px 0 0;
 }   
 
 /* 
