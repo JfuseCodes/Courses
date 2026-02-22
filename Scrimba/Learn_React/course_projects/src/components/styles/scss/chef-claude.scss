@@ -1,0 +1,88 @@
+$cc-primary-black: #141413;
+$cc-primary-white: #ffffff;
+$cc-secondary-white: #FAFAF8;
+$cc-gray: #F0EFEB;
+$cc-input-gray: #D1D5DB;
+
+.cc--container {
+    margin: 0 auto;
+    min-height: 90vh;
+    display:flex; 
+    justify-content: center;
+    min-width: 150px;
+    // width: 100vw; 
+    align-items: center;
+
+    .cc--content-container {
+        width: 720px;
+        box-shadow: 20px 20px 40px $cc-gray;
+        background-color: $cc-secondary-white;
+    }
+
+
+}
+
+
+.cc--header{
+    background-color: $cc-primary-white;
+    border-bottom: 2px solid $cc-gray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.chef-claude-icon {
+    width:43px;
+    height: 52px;
+    margin-right: 11px;
+}
+
+.cc--main-container {
+    
+
+    .cc--main-content {
+        
+        width: 594px;
+        margin: 70px auto;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        // align-items:center ;
+        .cc--form {
+            
+            .cc--form-input {
+                height: 38px;
+                width:399px;
+                height: 38px;
+                border-radius: 6px;
+                border: 1px solid $cc-input-gray;
+                background-color: $cc-primary-white;
+                margin-right: 12px;
+            }
+
+            .cc--form-button {
+                border: 1px solid $cc-primary-black;
+                background-color: $cc-primary-black;
+                color: $cc-secondary-white;
+                line-height: 20px;
+                height: 38px;
+                width: 183px;
+                border-radius: 6px;
+                padding: 9px 17px 9px 17px;
+             
+            }
+
+            .cc--form-button::before{
+                content: "+";
+                margin-right: 5px;
+            }
+        }
+
+        .cc--ingredient-list {
+            border:2px solid red;
+            width: 594px;
+            text-align: left;
+        }
+    }
+}
