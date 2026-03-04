@@ -2,7 +2,10 @@ $cc-primary-black: #141413;
 $cc-primary-white: #ffffff;
 $cc-secondary-white: #FAFAF8;
 $cc-gray: #F0EFEB;
+$cc-gray-secondary: #475467;
+$cc-gray-ternary: #6B7280;
 $cc-input-gray: #D1D5DB;
+$cc-get-recipe-btn: #D17557;
 
 .cc--container {
     margin: 0 auto;
@@ -79,10 +82,97 @@ $cc-input-gray: #D1D5DB;
             }
         }
 
-        .cc--ingredient-list {
-            border:2px solid red;
-            width: 594px;
-            text-align: left;
+        .cc--ingredients-section {
+            
+            
+            
+
+            .cc--ingredients-heading {
+                // border:2px solid red;
+                margin-top: 48px;
+                
+                text-align:left;
+        }
+
+            .cc--ingredient-list {
+                margin-top: 24px;
+                margin-bottom: 48px;
+                width: 594px;
+                text-align: left;
+                color: $cc-gray-secondary;
+                 
+                padding-left: 20px;
+
+                .cc--list-item{ 
+                    margin: 18px 0;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-indent: -6px;
+                }
+            }
+
+            .cc--get-recipe-container {
+                background-color: $cc-gray;
+                border-radius: 8px;
+
+                .cc--get-recipe-content {
+                    width: 594px;
+                    height: 109px;
+                    display:flex;
+                    text-align: left;
+                    .cc--gr-text {
+                        
+                        margin-left: 42px;
+                        width: 340px;
+                        // height: 52px;
+                        display:flex;
+                        // align-items: center;
+                        flex-direction: column;
+                        
+                        justify-content: center;
+                        .cc--gr-heading {
+                            color: $cc-primary-black;
+                            
+                        }
+
+                        .cc--gr-p{
+                            color: $cc-gray-ternary;
+                        }
+                    }
+
+                    .cc--gr-button-container {
+                         
+                        margin-left: 56px;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        .cc--gr-button {
+                            background-color: $cc-get-recipe-btn;
+                            border:1px solid $cc-get-recipe-btn;
+                            border-radius: 6px;
+                             
+                            width: 115px;
+                            color: $cc-secondary-white;
+                            
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
+
+.cc--main-container {
+    
+    .cc--suggested-recipe-container{
+        
+        text-align:left;
+        margin-top:60px;
+        
+        
+       
+    }
+}
+
+.cc--gray-secondary{color: $cc-gray-secondary;}

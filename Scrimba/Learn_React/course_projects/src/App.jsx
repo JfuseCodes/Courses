@@ -5,6 +5,7 @@ import DigitalBusinessCard from "./components/projects/digital_business_card"
 import TravelJournal from './components/projects/travel_journal'
 import ChefClaude from './components/projects/ChefClaude'
 import FormBasics from './components/projects/FormBasics'
+import Soundboard from './components/projects/SoundBoard'
 
 const App = () => {
   return (
@@ -12,8 +13,9 @@ const App = () => {
       {/* <ReactFacts /> */}
       {/* <DigitalBusinessCard /> */}
       {/* <TravelJournal /> */}
-      <FormBasics />
-      {/* <ChefClaude /> */}
+      {/* <FormBasics /> */}
+      {/* <Soundboard /> */}
+      <ChefClaude />
     </>
   )
 }

@@ -1,0 +1,58 @@
+.fb--container{
+    background-color: #2DD4BF;
+    // height: 550px;
+    width: 50%;
+    min-width: 450px;
+    // min-height: 90vh;
+    // margin: auto auto;
+    // margin: 0 auto;
+    // display:flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+
+    .fb--form-container{
+       margin-top: 80px;
+       width: 80%;
+       margin: 50px auto;
+
+        .fb--fieldset-container{
+           
+             
+                display:flex;
+                justify-content: center;
+                align-items:flex-start;
+                flex-direction: column;
+                margin-left: 16px;
+                border:1px solid #0D9488;
+                margin-top: 20px;
+            
+                
+        }
+    }
+
+}
+
+#employmentStatus {
+    margin-right: 10px;
+}
+
+.fb--submit-button {
+    border-radius: 100px;
+    border: 1px solid #0d9488;
+    padding: 10px 30px;
+    height: 40px;
+    font-weight: 600;
+    width: 260px;
+    margin-top: 20px;
+    transition: all 0.1s ease-in-out;
+    background-color: white;
+    margin-bottom: 40px;
+}
+
+.fb--submit-button:hover {
+    background-color: #115E59;
+    border-color: #042f2e;
+    color: white;
+    
+}
