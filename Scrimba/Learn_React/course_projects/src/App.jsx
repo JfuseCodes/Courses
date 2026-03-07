@@ -6,6 +6,9 @@ import TravelJournal from './components/projects/travel_journal'
 import ChefClaude from './components/projects/ChefClaude'
 import FormBasics from './components/projects/FormBasics'
 import Soundboard from './components/projects/SoundBoard'
+import MemeGenerator from './components/projects/MemeGenerator'
+import WindowTracker from './components/projects/WindowTracker'
+import UseEffects from './components/projects/UseEffects'
 
 const App = () => {
   return (
@@ -15,7 +18,10 @@ const App = () => {
       {/* <TravelJournal /> */}
       {/* <FormBasics /> */}
       {/* <Soundboard /> */}
-      <ChefClaude />
+      {/* <ChefClaude /> */}
+      {/* <UseEffects /> */}
+      {/* <WindowTracker /> */}
+      <MemeGenerator />
     </>
   )
 }

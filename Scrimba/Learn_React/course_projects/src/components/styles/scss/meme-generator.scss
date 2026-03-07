@@ -1,0 +1,163 @@
+$mg-primary-gradient1: #672280;
+$mg-primary-gradient2: #A626D3;
+$mg-primary-white: #FFFFFF;
+$mg-primary-dark: #374151;
+$mg-linear-gradient: linear-gradient(90.41deg, $mg-primary-gradient1 1.14%, $mg-primary-gradient2 100%);
+
+body{
+    display:grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.mg--container{
+    min-height: 550px;
+    width: 550px;
+    height: 550px;
+    box-shadow: 2px 2px 100px $mg-primary-gradient1;
+}
+
+
+// Header
+.mg--header-container {
+    background: $mg-linear-gradient;
+    height: 65px;
+    
+    .mg--header-content-container {
+         
+        height: 100%;
+        width: 200px;
+        margin-left: 29px;
+        display:flex;
+        justify-content: left;
+        align-items: center;
+
+
+        .mg--h-span {
+
+        }
+
+        .mg--h-img{
+            width: 32px;
+            height: 26px;
+        }
+
+        .mg--h-title {
+            font-size: 1.25rem;
+            color: $mg-primary-white;
+            line-height:100%;
+
+            margin-top: 8px;
+            margin-left: 6.69px;
+        }
+    }
+}
+
+//Main 
+
+.mg--main-container {
+
+ 
+    display:flex;
+    justify-content: center;
+    margin-top: 28px;
+    .mg--content-container {
+        width: 477px;
+ 
+        
+    
+        .mg--form-container {
+             
+
+            .mg--form {
+                display:flex;
+                flex-direction: column;
+                 
+                .mg--f-input-container{
+                    // border: 2px solid pink;
+                    display:flex;
+                    
+                    label{
+                        display:flex;
+                        flex-direction: column;
+                        align-items: self-start;
+
+                        input {
+                            width: 222px;
+                            height: 34px;
+                            
+                        }
+
+                        
+                    }
+                }
+            }
+            .mg--f-button {
+
+                button {
+                    background: $mg-linear-gradient;
+                    color: $mg-primary-white;
+                    border: 1px solid $mg-primary-gradient2;
+                    border-radius: 5px;
+                    width: 100%;
+                    margin-top: 15px;
+                    height: 40px;
+                }
+            }
+        }
+
+
+        .mg--meme-container {
+            margin-top: 32px;
+            
+            .mg--meme-content {
+
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                    height: 268px;
+                    border-radius: 3px;
+                }
+
+                span{
+                    position: absolute;
+                    text-align: center;
+                    margin-block: 15px;
+                    padding-inline: 5px;
+                    font-family: impact, sans-serif;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    color: white;
+                    letter-spacing: 1px;
+                    text-shadow:
+                        2px 2px 0 #000,
+                        -2px -2px 0 #000,
+                        2px -2px 0 #000,
+                        -2px 2px 0 #000,
+                        0 2px 0 #000,
+                        2px 0 0 #000,
+                        0 -2px 0 #000,
+                        -2px 0 0 #000,
+                        2px 2px 5px #000;
+                }
+
+                .top {
+                    top:0;
+                }
+
+                .bottom {
+                    bottom: 0;
+                }
+            }
+        }
+
+    }
+}
+
+
+//utility classes

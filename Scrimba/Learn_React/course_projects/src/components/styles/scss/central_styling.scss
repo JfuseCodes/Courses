@@ -4,6 +4,7 @@
 .fs-12 {font-size: 12px;}
 .fs-13 {font-size: 13px;}
 .fs-14 {font-size: 14px;}
+.fs-16{font-size: 16px;}
 .fs-18 {font-size: 18px;}
 .fs-25 {font-size: 25px;}
 .fs-30{font-size: 30px;}
@@ -29,5 +30,15 @@
 // .mt-20{margin-top: 60px;}
 .mt-20{margin-top:20px;}
 
+.ml-33{margin-left:33px;}
 .h-108 {height: 108px;}
 .h-38 {height: 38px;}
+
+.nice-looking-btn{
+    background-color: black;
+    border:1px solid black;
+    border-radius: 5px;
+    height: 64px;
+    width: 334px;
+    color: white;
+}
