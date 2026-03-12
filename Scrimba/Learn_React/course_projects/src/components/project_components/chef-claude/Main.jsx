@@ -11,12 +11,16 @@ export default function Main () {
     const [ingredients, setIngredients] = React.useState(['all the main spices', 'pasta', 'ground beef', 'tomato paste' ])
     const [recipe, setRecipe] = React.useState(null)
     const [recipeShown, setRecipeShown] = React.useState(false)
-
+    const recipeSection = React.useRef(null)
     
-
+    console.log(recipeSection)
     // const getRecipe = () => {
     //     setRecipeShown(prevValue => !prevValue);
     // }
+
+    React.useEffect(() => {
+        recipe != "" || null & recipeShown != null ? recipeSection.current.scrollIntoView() : null
+    }, [recipe])
 
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromMistral(ingredients)
@@ -46,7 +50,7 @@ export default function Main () {
                     <button className='cc--form-button fs-14 fw-300 h-38'>Add ingredient</button>
                 </form>
                 
-                <Ingredients list={ingredients} handleClick={getRecipe}/>
+                <Ingredients list={ingredients} handleClick={getRecipe} ref={recipeSection}/>
                 {recipeShown === true && <Recipe  recipe={recipe}/>}
             </div>
         </main>

@@ -8,6 +8,7 @@ import FormBasics from './components/projects/FormBasics'
 import Soundboard from './components/projects/SoundBoard'
 import MemeGenerator from './components/projects/MemeGenerator'
 import WindowTracker from './components/projects/WindowTracker'
+import Tenzie from './components/projects/Tenzie'
 import UseEffects from './components/projects/UseEffects'
 
 const App = () => {
@@ -21,7 +22,8 @@ const App = () => {
       {/* <ChefClaude /> */}
       {/* <UseEffects /> */}
       {/* <WindowTracker /> */}
-      <MemeGenerator />
+      {/* <MemeGenerator /> */}
+      <Tenzie />
     </>
   )
 }

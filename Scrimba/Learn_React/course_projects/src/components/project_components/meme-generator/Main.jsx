@@ -25,7 +25,7 @@ export default function Main(){
         // console.log(allMemes[randomNumber(1,100)])
         setMeme( prevValue => ({
             ...prevValue,
-            imageUrl: allMemes[randomNumber(1,100)].url
+            imageUrl: allMemes[randomNumber(0,allMemes.length - 1)].url
         }))
     }
 

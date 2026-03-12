@@ -1,0 +1,121 @@
+.tenzie--container {
+  width: 360px;
+  height: 379px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0B2434;
+}
+.tenzie--container .tenzie--content-container {
+  height: 320px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.t--header-container {
+  display: flex;
+  justify-content: center;
+}
+.t--header-container .t--content-container {
+  width: 250px;
+}
+.t--header-container .t--content-container p {
+  margin-top: -9px;
+  letter-spacing: -3%;
+  vertical-align: middle;
+  width: 232px;
+  color: #4A4E74;
+}
+
+.tenzies--main-container {
+  display: flex;
+  justify-content: center;
+}
+.tenzies--main-container .t--content-container {
+  width: 248.32px;
+}
+.tenzies--main-container .t--content-container .t--dice-container {
+  height: 90.24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 17px;
+  grid-row-gap: 18px;
+}
+.tenzies--main-container .t--button-container {
+  margin-top: 25.6px;
+}
+.tenzies--main-container .t--button-container .t--button {
+  background-color: #5035FF;
+  border: 1px solid #5035FF;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16.38px;
+  width: 92.16px;
+  height: 35.84px;
+  border-radius: 3.81px;
+}
+.tenzies--main-container .t--button-container .t--button-play-again {
+  font-size: 14px;
+  width: 145px;
+}
+
+.div1 {
+  grid-area: 1/1/2/2;
+}
+
+.div2 {
+  grid-area: 1/2/2/3;
+}
+
+.div3 {
+  grid-area: 1/3/2/4;
+}
+
+.div4 {
+  grid-area: 1/4/2/5;
+}
+
+.div5 {
+  grid-area: 1/5/2/6;
+}
+
+.div6 {
+  grid-area: 2/1/3/2;
+}
+
+.div7 {
+  grid-area: 2/2/3/3;
+}
+
+.div8 {
+  grid-area: 2/3/3/4;
+}
+
+.div9 {
+  grid-area: 2/4/3/5;
+}
+
+.div10 {
+  grid-area: 2/5/3/6;
+}
+
+.t--button-die {
+  height: 35px;
+  width: 35px;
+  color: #2B283A;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 3.81px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2 1% 0 black;
+}
+
+.frozen {
+  background-color: #59E391;
+  border: 1px solid #59E391;
+}
+
+/*# sourceMappingURL=tenzies.css.map */

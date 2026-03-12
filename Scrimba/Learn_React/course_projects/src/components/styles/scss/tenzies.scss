@@ -1,0 +1,119 @@
+$t--freeze-green: #59E391;
+$t--primary-white: #F5F5F5;
+$t--primary-dark: #0B2434;
+$t--secondary-dark: #4A4E74;
+$t--tertiary-dark: #2B283A;
+$t--button-roll: #5035FF;
+
+.tenzie--container {
+    
+    width: 360px;
+    height: 379px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $t--primary-dark;
+    
+    .tenzie--content-container {
+        height: 320px;
+        width: 320px;
+        border-radius: 10px;
+        background-color: $t--primary-white;
+    }
+}
+
+//header styling
+.t--header-container{
+    
+    display:flex;
+    justify-content: center;
+    
+    .t--content-container {
+        
+        width: 250px;
+
+        p{
+            margin-top:-9px;
+            letter-spacing: -3%;
+            vertical-align: middle;
+            width: 232px;
+            color: $t--secondary-dark;
+        }
+        
+    }
+}
+
+// main styling
+.tenzies--main-container {
+    
+    display:flex;
+    justify-content: center;
+    .t--content-container {
+        
+        width: 248.32px;
+       
+        .t--dice-container {
+            
+            height: 90.24px;
+            
+
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-column-gap: 17px;
+            grid-row-gap: 18px;
+        }
+    }
+
+    .t--button-container {
+        margin-top: 25.6px;
+        .t--button {
+            background-color: $t--button-roll;
+            border: 1px solid $t--button-roll;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 16.38px;
+            width: 92.16px;
+            height: 35.84px;
+            border-radius: 3.81px;
+        }
+        .t--button-play-again {
+            font-size: 14px;
+            width:145px;
+        }
+    }
+}
+
+
+//grid setup
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 2 / 1 / 3 / 2; }
+.div7 { grid-area: 2 / 2 / 3 / 3; }
+.div8 { grid-area: 2 / 3 / 3 / 4; }
+.div9 { grid-area: 2 / 4 / 3 / 5; }
+.div10 { grid-area: 2 / 5 / 3 / 6; }
+
+// utility classes
+
+
+
+.t--button-die {
+    height: 35px;
+    width: 35px;
+    color: $t--tertiary-dark;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 3.81px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2 1% 0 black;
+}
+
+.frozen {
+    background-color: $t--freeze-green;
+    border:1px solid $t--freeze-green;
+}

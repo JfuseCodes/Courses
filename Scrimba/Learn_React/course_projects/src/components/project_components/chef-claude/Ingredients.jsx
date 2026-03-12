@@ -22,7 +22,7 @@ const ingredientList = props.list.map( ingredient => {
                             &&
                             <div className='cc--get-recipe-container'>
                             <div className='cc--get-recipe-content'>
-                                <div className='cc--gr-text'>
+                                <div className='cc--gr-text' ref={props.ref}>
                                     <h3 className='cc--gr-heading fs-18'>Ready for recipe?</h3>
                                     <p className='cc--gr-p fw-200 fs-14 lh-20'>Generate a recipe from your list of ingredients.</p>
                                 </div>

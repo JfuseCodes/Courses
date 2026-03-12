@@ -15,7 +15,6 @@ $cc-get-recipe-btn: #D17557;
     min-width: 150px;
     // width: 100vw; 
     align-items: center;
-
     .cc--content-container {
         width: 720px;
         box-shadow: 20px 20px 40px $cc-gray;
@@ -83,6 +82,7 @@ $cc-get-recipe-btn: #D17557;
         }
 
         .cc--ingredients-section {
+    scroll-behavior: smooth;
             
             
             
