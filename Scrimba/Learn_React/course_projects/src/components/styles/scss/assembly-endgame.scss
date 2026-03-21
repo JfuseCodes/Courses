@@ -1,0 +1,122 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+// colors
+$primary-light: #F9F4DA;
+$primary-dark: #1E1E1E;
+$secondary-dark: #282726;
+$light-gray: #8E8E8E; 
+$darker-yellow: #FCBA29;
+$gray-border: #D7D7D7;
+$green: #10A95B;
+$purple: #7A5EA7;
+$red: #EC5D49;
+$blue: #11B5E5;
+//programming colors
+
+// utility classes - 
+
+//APP container styling
+.AEG--container {
+    font-family: "Hanken Grotesk", sans-serif;
+    height:726px;
+    width: 594px;
+    background-color: $secondary-dark;
+    display:flex;
+    justify-content: center;
+
+    .AEG--content-container {
+        border:2px solid red;
+        width: 480px;
+    }
+}
+
+// Header Styling
+.AEG--header-container {
+
+    margin-top: 73px;
+    .AEG--header-content {
+
+        width: 352px;
+        height: 66px;
+        margin: auto;
+
+        .AEG--h-p {
+            margin-top: -4px;
+        }
+    }
+}
+
+// Main Styling - General
+.AEG--main-container {
+
+    .AEG--content-container {
+
+
+    }
+}
+
+// Programming Language Section
+
+.AEG--PLS-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2px;
+    width: 254px;
+    height: 52px;
+    margin-top: 36px;
+}
+
+.programming-language {
+    border-radius: 3px;
+    padding: 4.5px;
+    gap: 4.5px;
+    width: auto;
+    height: 25px;
+    
+}
+
+
+// Utility classes - colors
+.primary-light{ color: $primary-light;}
+.primary-dark{ color: $primary-dark; }
+.light-gray{ color: $light-gray;}
+//utility classes - programming languages
+.HTML {
+
+}
+
+.CSS {
+
+}
+
+.Javascript {
+
+}
+
+.React {
+
+}
+
+.Typescript {
+
+}
+
+.Node.js {
+
+}
+
+.Python {
+}
+
+.Ruby {
+
+}
+
+.Assembly {
+
+}

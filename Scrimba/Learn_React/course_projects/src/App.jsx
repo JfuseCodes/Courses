@@ -10,6 +10,7 @@ import MemeGenerator from './components/projects/MemeGenerator'
 import WindowTracker from './components/projects/WindowTracker'
 import Tenzie from './components/projects/Tenzie'
 import UseEffects from './components/projects/UseEffects'
+import AssemblyEndGame from './components/projects/AssemblyEndgame'
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
       {/* <UseEffects /> */}
       {/* <WindowTracker /> */}
       {/* <MemeGenerator /> */}
-      <Tenzie />
+      {/* <Tenzie /> */}
+      <AssemblyEndGame />
     </>
   )
 }

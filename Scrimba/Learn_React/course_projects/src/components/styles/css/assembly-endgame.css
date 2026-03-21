@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+.AEG--container {
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 726px;
+  width: 594px;
+  background-color: #282726;
+  display: flex;
+  justify-content: center;
+}
+.AEG--container .AEG--content-container {
+  border: 2px solid red;
+  width: 480px;
+}
+
+.AEG--header-container {
+  margin-top: 73px;
+}
+.AEG--header-container .AEG--header-content {
+  width: 352px;
+  height: 66px;
+  margin: auto;
+}
+.AEG--header-container .AEG--header-content .AEG--h-p {
+  margin-top: -4px;
+}
+
+.AEG--PLS-container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2px;
+  width: 254px;
+  height: 52px;
+  margin-top: 36px;
+}
+
+.programming-language {
+  border-radius: 3px;
+  padding: 4.5px;
+  gap: 4.5px;
+  width: auto;
+  height: 25px;
+}
+
+.primary-light {
+  color: #F9F4DA;
+}
+
+.primary-dark {
+  color: #1E1E1E;
+}
+
+.light-gray {
+  color: #8E8E8E;
+}
+
+/*# sourceMappingURL=assembly-endgame.css.map */
