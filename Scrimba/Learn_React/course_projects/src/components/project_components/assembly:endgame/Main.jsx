@@ -40,8 +40,21 @@ export default function Main() {
             .then(res => res.json())
             .then(result => {
                 console.log(result)
+
+                // result is an array like ["example"]
+                const wordString = result[0]
+
+                //.split('')
+                const formattedWord = wordString.split('').map( (value, index) => ({
+                    id: index + 1,
+                    letter: value
+                }));
                 
+                // Update state directly with the new array
+                setWord(formattedWord)
             })
+            .catch( err => console.error("Fetch error:", err)) 
+
     }, [])
     
     return(
