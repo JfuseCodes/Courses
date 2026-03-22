@@ -53,10 +53,26 @@ $blue: #11B5E5;
     .AEG--content-container {
 
 
+        
+
     }
 }
 
-// Programming Language Section
+//Main - Message Banner
+.AEG--message-banner-container {
+    border:2px solid red;
+    display:flex;
+    justify-content: center;
+
+    .AEG--mb-content {
+        width: 352px;
+        height: 59px;
+        border: 1px dashed #323232;
+        border-style: dashed;
+    }
+}
+
+//Main - Programming Language Section
 
 .AEG--PLS-container {
     display: inline-flex;
@@ -80,11 +96,38 @@ $blue: #11B5E5;
     
 }
 
+// Main - word section
+.AEG--word-container {
+
+    .AEG--w-content {
+        display:flex;
+        justify-content: center;
+        font-size: 18px;
+        border:2px solid blue;
+    }
+}
+
+.AEG--w-letter {
+    border:2px solid red;
+    
+}
+
+// Utility classes - font
+
 
 // Utility classes - colors
+
+// text colors
 .primary-light{ color: $primary-light;}
 .primary-dark{ color: $primary-dark; }
 .light-gray{ color: $light-gray;}
+
+//background colors
+.purple{ background-color: $purple;}
+  .red { background-color: $red; }
+.green { background-color: $green; }
+ .blue { background-color: $blue; }
+
 //utility classes - programming languages
 .HTML {
 

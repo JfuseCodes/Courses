@@ -114,6 +114,10 @@
   height: 38px;
 }
 
+.fs-i {
+  font-style: italic;
+}
+
 .nice-looking-btn {
   background-color: black;
   border: 1px solid black;
