@@ -11,6 +11,7 @@ $gray-border: #D7D7D7;
 $green: #10A95B;
 $purple: #7A5EA7;
 $red: #EC5D49;
+$red-loss: #BA2A2A;
 $blue: #11B5E5;
 //programming colors
 
@@ -26,7 +27,7 @@ $blue: #11B5E5;
     justify-content: center;
 
     .AEG--content-container {
-        border:2px solid red;
+        
         width: 480px;
     }
 }
@@ -60,15 +61,26 @@ $blue: #11B5E5;
 
 //Main - Message Banner
 .AEG--message-banner-container {
-    border:2px solid red;
+    
+    height: 59px;
     display:flex;
     justify-content: center;
+    
 
     .AEG--mb-content {
         width: 352px;
         height: 59px;
         border: 1px dashed #323232;
         border-style: dashed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .mb--p {
+            margin: 0; 
+            padding: 0;
+        }
     }
 }
 
@@ -82,7 +94,7 @@ $blue: #11B5E5;
     align-items: center;
     align-content: center;
     gap: 2px;
-    width: 254px;
+    width: 263px;
     height: 52px;
     margin-top: 36px;
 }
@@ -98,19 +110,111 @@ $blue: #11B5E5;
 
 // Main - word section
 .AEG--word-container {
-
-    .AEG--w-content {
+    
+    margin-top: 36px;
+    .AEG--word-content {
         display:flex;
         justify-content: center;
         font-size: 18px;
-        border:2px solid blue;
+        
+        .AEG--w-letter {
+            
+            display:flex;
+            justify-content: center;
+            // align-items: center;
+            margin: 0 2px;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            background-color: #323232;
+            border-bottom: 1px solid $primary-light;
+
+            
+        }
     }
 }
 
-.AEG--w-letter {
-    border:2px solid red;
-    
+
+//Main - Keyboard Section
+.AEG--keyboard-container {
+
+    margin-top: 64px;
+
+    .AEG--keyboard-content {
+
+        width: 480px;
+        height: 136px;
+        
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+    }
 }
+
+// keyboard key grid styling
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 1 / 6 / 2 / 7; }
+.div7 { grid-area: 1 / 7 / 2 / 8; }
+.div8 { grid-area: 1 / 8 / 2 / 9; }
+.div9 { grid-area: 1 / 9 / 2 / 10; }
+.div10 { grid-area: 1 / 10 / 2 / 11; }
+.div11 { grid-area: 2 / 1 / 3 / 2; }
+.div12 { grid-area: 2 / 2 / 3 / 3; }
+.div13 { grid-area: 2 / 3 / 3 / 4; }
+.div14 { grid-area: 2 / 4 / 3 / 5; }
+.div15 { grid-area: 2 / 5 / 3 / 6; }
+.div16 { grid-area: 2 / 6 / 3 / 7; }
+.div17 { grid-area: 2 / 7 / 3 / 8; }
+.div18 { grid-area: 2 / 8 / 3 / 9; }
+.div19 { grid-area: 2 / 9 / 3 / 10; }
+.div20 { grid-area: 2 / 10 / 3 / 11; }
+.div21 { grid-area: 3 / 3 / 4 / 4; }
+.div22 { grid-area: 3 / 4 / 4 / 5; }
+.div23 { grid-area: 3 / 5 / 4 / 6; }
+.div24 { grid-area: 3 / 6 / 4 / 7; }
+.div25 { grid-area: 3 / 7 / 4 / 8; }
+.div26 { grid-area: 3 / 8 / 4 / 9; }
+
+// keyboard key styling
+.keyboard-key {
+    background-color: $darker-yellow;
+    border-radius: 4px;
+    border: 1px solid $gray-border;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-dark;
+}
+
+
+
+// MAIN - New Game Button
+.AEG--newgamebutton-container {
+    
+    margin-top: 36px;
+
+    .AEG--NGB-content {
+
+        .AEG--newgamebutton {
+            height: 44px;
+            width: 228px;
+            border:1px solid $gray-border;
+            border-radius: 4px;
+            color: $primary-dark;
+        }
+    }
+}
+
+
 
 // Utility classes - font
 
@@ -124,21 +228,77 @@ $blue: #11B5E5;
 
 //background colors
 .purple{ background-color: $purple;}
-  .red { background-color: $red; }
+  .red { background-color: $red-loss; }
 .green { background-color: $green; }
  .blue { background-color: $blue; }
 
+ // text colors
+ .red-text{
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: $red;}
 //utility classes - programming languages
+
+
+// Utility classes - GAME LOGIC
+.hidden {
+    display:none;
+}
+
+.isShown {
+
+                margin: 0;
+                padding: 0;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+}
+
+.kk-active {
+    
+}
+
+.kk-correct {
+    background-color: $green;
+}
+
+.kk-incorrect {
+    background-color: $red;
+}
+
+.dead {
+    opacity: 10%;
+    // position:relative;
+}
+.skull-parent {
+    // position: absolute;
+    position: relative;
+    
+}
+.skull{
+    position: absolute;
+    right:18px;
+    top:-6px;
+    // bottom:0px;
+    // right: 20px;
+    // top: -5px;
+    // opacity: 100%;
+}
+
+
 .HTML {
 
 }
 
 .CSS {
-
+    right:10px;
 }
 
 .Javascript {
-
+    right: 30px;
 }
 
 .React {
@@ -146,11 +306,11 @@ $blue: #11B5E5;
 }
 
 .Typescript {
-
+    right: 27px;
 }
 
-.Node.js {
-
+.Node.js{
+    
 }
 
 .Python {
@@ -161,5 +321,5 @@ $blue: #11B5E5;
 }
 
 .Assembly {
-
+    right: 28px;
 }

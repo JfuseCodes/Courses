@@ -1,13 +1,19 @@
 export default function Letter (props) {
-    console.log(props)
-    // console.log(props.word[0].split(''))
 
-
-    // const word = props.word[0].split('').map( letter => {
-    //     return <div className='AEG--w-letter'>{letter.toUpperCase()}</div>
-    // })
+    const gameLost = <div className='AEG--w-letter primary-light'>
+        <p className={`${props.isShown == true ? 'isShown' : 'red-text'}`}>{props.letter.toUpperCase()}</p>
+    </div>
+    
+    const regularGameFlow =  <div className='AEG--w-letter primary-light'>
+            <p className={`${props.isShown == true ? 'isShown' : 'hidden'}`}>{props.letter.toUpperCase()}</p>
+        </div>
 
     return (
-        <div className='AEG--w-content primary-light'>{props.letter}</div>
+        //  <div className='AEG--w-letter primary-light'>
+        //     <p className={`${props.isShown == true ? 'isShown' : 'hidden'}`}>{props.letter}</p>
+        // </div>
+       <>
+       {props.gameResult == 'lost' ? gameLost : regularGameFlow}
+       </>
     )
 } 
