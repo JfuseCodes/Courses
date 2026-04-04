@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+//color themes
+$primary-light: #F5F7F8;
+$primary-dark: #4D5B9E;
+$light-blue: #D6DBF5;
+$dark-blue: #293264;
+
+$green: #94D7A2;
+$red: #F8BCBC;
+
+// APP Container Styling
+
+.quizzical--container {
+    
+    width: 550px;
+    height: 550px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F7FB;
+    
+    .quizzical--content-container {
+        
+        width: 400px;
+    }
+
+}
+
+// start menu styling
+.q--start-menu-container {
+
+    .q--start-menu-heading {
+
+        h1 {
+
+        }
+
+        p {
+            padding:0;
+            margin:0;
+        }
+    }
+}
+
+// button styling
+.q--primary-button {
+    background-color: $primary-dark;
+    color: $primary-light;
+    border:1px solid $primary-dark;
+    
+}
+
+.q--btn-start-menu {
+    margin-top: 29px;
+    height: 52px;
+    width: 193px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+// utility classes
+
+// font - family
+.ff-karla {
+    font-family: "Karla", sans-serif;
+}
+
+.ff-inter {
+    font-family: "Inter", sans-serif; 
+}
+
+// font - text-color
+.text-pl { color: $primary-light;}
+.text-pd {color: $primary-dark;}
+.text-lightblue {color: $light-blue;}
+.text-darkblue{color: $dark-blue;}
+
+
+// button - background color
+.success { background-color: $green;}
+.failure { background-color: $red;}

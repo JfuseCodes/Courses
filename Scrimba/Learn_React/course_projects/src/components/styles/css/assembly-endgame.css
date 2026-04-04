@@ -293,6 +293,10 @@
   top: -6px;
 }
 
+.dim-keyboard {
+  opacity: 50%;
+}
+
 .CSS {
   right: 10px;
 }

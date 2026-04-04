@@ -1,7 +1,7 @@
 export default function MessageBanner(props){
     let currentMessage = null
     let bannerBackgroundColor = null
-    console.log(props.gameResult)
+
 
     switch(props.count) {
         

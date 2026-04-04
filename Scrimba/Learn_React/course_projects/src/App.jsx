@@ -11,6 +11,7 @@ import WindowTracker from './components/projects/WindowTracker'
 import Tenzie from './components/projects/Tenzie'
 import UseEffects from './components/projects/UseEffects'
 import AssemblyEndGame from './components/projects/AssemblyEndgame'
+import Quizzical from './components/projects/Quizzical'
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
       {/* <WindowTracker /> */}
       {/* <MemeGenerator /> */}
       {/* <Tenzie /> */}
-      <AssemblyEndGame />
+      {/* <AssemblyEndGame /> */}
+      <Quizzical />
     </>
   )
 }

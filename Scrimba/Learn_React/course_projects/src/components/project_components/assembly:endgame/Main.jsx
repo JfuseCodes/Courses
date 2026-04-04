@@ -1,5 +1,6 @@
 import React from 'react'
-import WordData from './Data/WordData'
+// import WordData from './Data/WordData'
+import GetWord from './Data/WordData'
 import ProgrammingLanguageData from "./Data/ProgrammingLanguageData"
 import ProgrammingLanguage from './ProgrammingLanguage'
 import MessageBanner from './MessageBanner'
@@ -14,9 +15,8 @@ export default function Main() {
     const [gameResult, setGameResult] = React.useState(null)
     const [programmingLanguages, setProgrammingLanguages] = React.useState(ProgrammingLanguageData)
     const [programmingLanguageCount, setProgrammingLanguageCount] = React.useState(0);
-    const [word, setWord] = React.useState(WordData)
+    const [word, setWord] = React.useState(null)
     const [keyboard, setKeyboard] = React.useState(Alphabet)
-    const [activeKeyboardKey, setActiveKeyboardKey] = React.useState(null)
     const programmingLanguageSection = programmingLanguages.map(language => {
         return <ProgrammingLanguage 
                     id={language.id}
@@ -28,7 +28,24 @@ export default function Main() {
                 />
     })
 
+    async function loadWord() {
+
+            // 1. Await the promise to get the actual string
+            const wordString = await GetWord()
+
+            //2. Format the raw string into your object structure
+            const charArray = wordString.split('').map((char,index) => ({
+                id: index + 1, 
+                letter: char,
+                isShown: false
+            }))
+
+            // 3. Set state with final array
+            setWord(charArray)
+    }
+
     const getActiveKeyboardKey = event => {
+        
         if(!gameState) return; // Prevent clicks if game is over
 
         const clickedLetter = event.target.innerText.toUpperCase();
@@ -60,125 +77,37 @@ export default function Main() {
     }
     
     const startNewGame = () => {
-        console.log('start new game!')
+        loadWord()
         setKeyboard(Alphabet)
-        setWord(WordData)
         setProgrammingLanguages(ProgrammingLanguageData)
         setProgrammingLanguageCount(0)
         setGameResult(null)
         setGameState(true)
     }
-    
-    // for use after hard coded word is finished with -> using hard coded data to stop over calling fetch/api
-//     React.useEffect(() => {
-//         const getWord = async () => {
-//             try {
-//             const response = await fetch('https://random-word-api.herokuapp.com/word');
-            
-//             // 1. Check if the response is actually okay (not a 503 or 404)
-//             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-//             const result = await response.json(); // result is ["word"]
-//             const wordString = result[0];
-
-//             //create array of objects
-//             const charArray = wordString.split('').map( (char, index) => ({
-//                 id: index + 1,
-//                 letter:char,
-//                 isShown: false
-//             }))
-
-              
-
-//             // 3. Update state directly
-//             setWord(charArray);
-//             console.log(word)
-//             } catch (err) {
-//             console.error("Fetch failed:", err.message);
-//             }
-//         };
-
-//         getWord();
-// }, []);
-
-
-
-    // after keyboard button is clicked check if they match the word
-    // React.useEffect(() => {                     
-    //     if (!activeKeyboardKey) return
-        
-    //     setWord(prevWord => 
-    //         prevWord.map(item =>       
-    //         {
-    //             return item.letter.toUpperCase() === activeKeyboardKey.toUpperCase() ? {...item, isShown: true} : item
-    //         })
-    //     )
-
-
-    // }, [activeKeyboardKey])
+       
+    React.useEffect(() => { loadWord() }, [])
 
     React.useEffect(() => {
+        // wait for word
+        if(word == null) return; 
+        
+        // determine win/loss
         const isWon = word.every(letter => letter.isShown);
         const isLost = programmingLanguageCount >= programmingLanguages.length; // count greater than total number os languages
 
-        if(isWon && gameState) {
-            setGameState(false);
-            setGameResult("won")
-
-        } else if(isLost && gameState) {
-            setGameState(false)
-            setGameResult("lost")
+        // only update if game is active
+        if(gameState) {
+            if(isWon) {
+                setGameState(false);
+                setGameResult("won")
+            } else if(isLost) {
+                setGameState(false)
+                setGameResult("lost")
+            }
         }
 
-        // if(!activeKeyboardKey) return;
+    }, [word, programmingLanguageCount, gameState, programmingLanguages.length])
 
-        // setKeyboard(prevKeyboard => 
-        //     prevKeyboard.map(( key => {
-        //         // only update the key that was clicked
-        //         if (key.letter === activeKeyboardKey.char) {
-        //             return {
-        //                 ...key,
-        //                 isActive: false,
-        //                 isCorrect: activeKeyboardKey.isCorrect
-        //             }
-        //         }
-
-        //         // Return everyone else untouched
-        //         return key; 
-        //     }))
-        // )
-
-        // if(activeKeyboardKey.isCorrect === false) {
-        //     setProgrammingLanguages(prevlanguages => 
-        //         prevlanguages.map( (language, index) => {
-        //             //If this languages index matches current count, kill it
-        //             return index === programmingLanguageCount ? {...language, isActive: false} : language
-        //         })
-        //     )
-        // // Move to the next language for the next wrong guess
-        //     setProgrammingLanguageCount(prevCount => prevCount + 1)
-        // }
-
-        // //check gameState & determine when game is over
-        // if(gameState && programmingLanguageCount < 8) {
-        //     //1. Check ifa ll letters are shown (WIN)
-        //     const isWon = word.every( letter => letter.isShown === true)
-
-        //     if(isWon){
-        //         setGameState(false)
-        //         setGameResult(true)
-        //     }
-
-        //     //2. Check if lives are out (LOSS) -> if count reaches 8 handle loss here
-            
-        // }
-        // if(programmingLanguageCount >= 8){
-        //         setGameState(false)
-        //         setGameResult(true)
-        //     }
-
-    }, [word, programmingLanguageCount])
-    console.log(programmingLanguageCount)
    
     return(
         <main className='AEG--main-container'>
@@ -193,7 +122,7 @@ export default function Main() {
                 
                 <section className='AEG--word-container'>
                     <div className='AEG--word-content'>
-                        {word.map( letter => <Letter id={letter.id} key={letter.id} letter={letter.letter} isShown={letter.isShown} gameState={gameState} gameResult={gameResult}/>)}
+                        {word != null && word.map( letter => <Letter id={letter.id} key={letter.id} letter={letter.letter} isShown={letter.isShown} gameState={gameState} gameResult={gameResult}/>)}
                     </div>
                 </section>
 
@@ -206,6 +135,7 @@ export default function Main() {
                                                 letter={key.letter}
                                                 isActive = {key.isActive}
                                                 isCorrect= {key.isCorrect} 
+                                                gameState= {gameState}
                                                 />
                                                 )}
                     </div>

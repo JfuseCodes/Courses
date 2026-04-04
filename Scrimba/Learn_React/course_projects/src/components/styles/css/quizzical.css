@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+.quizzical--container {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F7FB;
+}
+.quizzical--container .quizzical--content-container {
+  width: 400px;
+}
+
+.q--start-menu-container .q--start-menu-heading p {
+  padding: 0;
+  margin: 0;
+}
+
+.q--primary-button {
+  background-color: #4D5B9E;
+  color: #F5F7F8;
+  border: 1px solid #4D5B9E;
+}
+
+.q--btn-start-menu {
+  margin-top: 29px;
+  height: 52px;
+  width: 193px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.ff-karla {
+  font-family: "Karla", sans-serif;
+}
+
+.ff-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.text-pl {
+  color: #F5F7F8;
+}
+
+.text-pd {
+  color: #4D5B9E;
+}
+
+.text-lightblue {
+  color: #D6DBF5;
+}
+
+.text-darkblue {
+  color: #293264;
+}
+
+.success {
+  background-color: #94D7A2;
+}
+
+.failure {
+  background-color: #F8BCBC;
+}
+
+/*# sourceMappingURL=quizzical.css.map */
