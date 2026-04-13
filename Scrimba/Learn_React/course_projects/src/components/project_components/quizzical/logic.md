@@ -1,13 +1,15 @@
-# To do list: 
-- position the blobs according the figma file
-- have the questions and answers display on the page after clicking start quiz button
-- style the questions/answers
+# To do List: 
 
-# Start button logic
-- after clicking, map the array of questions and answers
- - each object in the array should return:
-   1. question title
-   2. 1 correct answer
-   3. 3 incorrect answers
-   4. border bottom or <br> tag
+Psuedocode: Shuffling an array
+
+take the first array and place it in a random number
+take the second array item and place it in a random number
+repeat until the length of array - 1
+
+
+
+
+
+
+
 

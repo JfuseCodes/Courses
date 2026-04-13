@@ -90,8 +90,20 @@
   margin-top: 9px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-31 {
+  margin-top: 31px;
+}
+
 .mt-33 {
   margin-top: 33px;
+}
+
+.mt-40 {
+  margin-top: 40px;
 }
 
 .mb-18 {
@@ -100,6 +112,10 @@
 
 .mb-24 {
   margin-bottom: 24px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
 }
 
 .mt-20 {
@@ -112,6 +128,14 @@
 
 .h-108 {
   height: 108px;
+}
+
+.h-30 {
+  height: 30px;
+}
+
+.h-35 {
+  height: 35px;
 }
 
 .h-38 {
@@ -129,6 +153,10 @@
   height: 64px;
   width: 334px;
   color: white;
+}
+
+.br-10 {
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=central_styling.css.map */

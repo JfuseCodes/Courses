@@ -8,7 +8,10 @@
   background-color: #F5F7FB;
 }
 .quizzical--container .quizzical--content-container {
-  width: 400px;
+  min-width: 400px;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .q--start-menu-container .q--start-menu-heading p {
@@ -16,9 +19,61 @@
   margin: 0;
 }
 
+.q--yellow-blob-container {
+  position: absolute;
+  width: 0;
+}
+.q--yellow-blob-container .q--yellow-blob {
+  position: relative;
+  width: 125px;
+  bottom: 219px;
+  left: 150px;
+}
+
+.q--blue-blob-container {
+  width: 0;
+}
+.q--blue-blob-container .q--blue-blob {
+  width: 72px;
+  position: relative;
+  top: 245px;
+  right: 75px;
+}
+
+.quizzical--quiz-container {
+  margin-top: 40px;
+}
+
+.q--qa-set-container {
+  max-width: 355px;
+  text-align: justify;
+}
+.q--qa-set-container .q--question-container {
+  margin-top: 14.63px;
+}
+.q--qa-set-container .q--question-container h3 {
+  letter-spacing: -0.1px;
+}
+.q--qa-set-container .q--answer-set-container {
+  margin-bottom: 14.99px;
+  display: flex;
+  gap: 12.71px;
+  width: 390px;
+}
+.q--qa-set-container hr {
+  width: 390px;
+  padding: 0;
+  margin: -8px;
+}
+
+.q--btn-check-answer-container .q--btn-check-answers {
+  font-size: 10.24px;
+  color: #F5F7FB;
+}
+
 .q--primary-button {
   background-color: #4D5B9E;
-  color: #F5F7F8;
+  color: #F5F7FB;
   border: 1px solid #4D5B9E;
 }
 
@@ -31,6 +86,33 @@
   font-weight: 300;
 }
 
+.q--btn-check-answers, .q--btn-play-again {
+  width: 120px;
+  font-size: 10.24px;
+}
+
+.btn-choice {
+  width: auto;
+  min-width: 65.92px;
+  min-height: 20.65px;
+  height: auto;
+  border-radius: 7.94px;
+  border: 1px solid #4D5B9E;
+  color: #293264;
+  background-color: #F5F7FB;
+}
+
+.quizzical--outcome-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quizzical--outcome-text {
+  padding: 0;
+  margin: 0;
+}
+
 .ff-karla {
   font-family: "Karla", sans-serif;
 }
@@ -40,7 +122,7 @@
 }
 
 .text-pl {
-  color: #F5F7F8;
+  color: #F5F7FB;
 }
 
 .text-pd {
@@ -57,10 +139,22 @@
 
 .success {
   background-color: #94D7A2;
+  border-color: #94D7A2;
 }
 
 .failure {
   background-color: #F8BCBC;
+  border-color: #F8BCBC;
+  opacity: 50%;
+}
+
+.chosen {
+  background-color: #D6DBF5;
+  border-color: #D6DBF5;
+}
+
+.unchosen {
+  opacity: 50%;
 }
 
 /*# sourceMappingURL=quizzical.css.map */
